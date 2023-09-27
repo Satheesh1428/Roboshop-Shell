@@ -1,4 +1,4 @@
-cp Catalouge.service /etc/systemd/system/catalogue.service
+cp Catalouge.service /etc/systemd/system/Catalouge.service
 cp Mongo.repo /etc/yum.repos.d/mongo.repo
 curl -sL https://rpm.nodesource.com/setup_lts.x | bash
 dnf install nodejs -y
@@ -12,7 +12,7 @@ npm install
 yum install mongodb-org-shell -y
 mongo --host mongodb.devopsovsn.online </app/schema/catalogue.js
 systemctl daemon-reload
-systemctl enable catalogue
-systemctl start catalogue
+systemctl enable Catalouge
+systemctl restart Catalouge
 dnf install mongodb-org-shell -y
 
