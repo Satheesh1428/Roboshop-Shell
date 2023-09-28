@@ -1,5 +1,5 @@
-cp Mongo.repo /etc/yum.repos.d/mongo.repo
-cp User.service /etc/systemd/system/user.service
+cp Mongo.repo /etc/yum.repos.d/Mongo.repo
+cp User.service /etc/systemd/system/User.service
 curl -sL https://rpm.nodesource.com/setup_lts.x | bash
 yum install nodejs -y
 useradd roboshop
@@ -13,4 +13,4 @@ yum install mongodb-org-shell -y
 mongo --host mongodb.devopsovsn.online </app/schema/user.js
 systemctl daemon-reload
 systemctl enable user
-systemctl start user
+systemctl restart user
