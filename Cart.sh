@@ -1,4 +1,4 @@
-cp Cart.sh /etc/systemd/system/cart.service
+cp Cart.sh /etc/systemd/system/Cart.service
 curl -sL https://rpm.nodesource.com/setup_lts.x | bash
 yum install nodejs -y
 useradd roboshop
@@ -10,4 +10,4 @@ cd /app
 npm install
 systemctl daemon-reload
 systemctl enable cart
-systemctl start cart
+systemctl restart cart
