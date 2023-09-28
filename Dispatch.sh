@@ -1,4 +1,4 @@
-cp Dispatch.service /etc/systemd/system/dispatch.service
+cp Dispatch.service /etc/systemd/system/Dispatch.service
 yum install golang -y
 useradd roboshop
 mkdir /app
@@ -12,4 +12,4 @@ go build
 
 systemctl daemon-reload
 systemctl enable dispatch
-systemctl start dispatch
+systemctl restart dispatch
